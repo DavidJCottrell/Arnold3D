@@ -7,7 +7,7 @@
 
 Screen::Screen() {
     SDL_Init(SDL_INIT_VIDEO);
-    SDL_CreateWindowAndRenderer(400, 400, 0, &window, &renderer);
+    SDL_CreateWindowAndRenderer(800, 800, 0, &window, &renderer);
     SDL_RenderSetScale(renderer, 2, 2);
 }
 

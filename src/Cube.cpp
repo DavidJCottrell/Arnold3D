@@ -4,17 +4,17 @@
 
 #include <Cube.h>
 
-Cube::Cube() {
+Cube::Cube(vec3 position, float size) {
     points = {
-            {50, 50, 50},
-            {150, 50, 50},
-            {150, 150, 50},
-            {50, 150, 50},
+            {position.x + (size * 25), position.y + (size * 25), position.z + (size * 25)},
+            {position.x + (size * 75), position.y + (size * 25), position.z + (size * 25)},
+            {position.x + (size * 75), position.y + (size * 75), position.z + (size * 25)},
+            {position.x + (size * 25), position.y + (size * 75), position.z + (size * 25)},
 
-            {50, 50, 150},
-            {150, 50, 150},
-            {150, 150, 150},
-            {50, 150, 150},
+            {position.x + (size * 25), position.y + (size * 25), position.z + (size * 75)},
+            {position.x + (size * 75), position.y + (size * 25), position.z + (size * 75)},
+            {position.x + (size * 75), position.y + (size * 75), position.z + (size * 75)},
+            {position.x + (size * 25), position.y + (size * 75), position.z + (size * 75)},
     };
 
     connections = {

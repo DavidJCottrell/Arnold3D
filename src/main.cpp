@@ -4,10 +4,18 @@
 int main() {
 
     Screen screen;
-    Cube cube;
 
+    std::vector<Cube> cubes {
+            {Cube({0, 0, 0}, 1)},
+            {Cube({10, 10, 0}, 1)},
+            {Cube({20, 20, 0}, 1)},
+            {Cube({30, 30, 0}, 1)},
+    };
+    
     while(screen.getIsPlaying()){
-        cube.render(screen);
+        for(auto& cube : cubes){
+            cube.render(screen);
+        }
         screen.render();
         screen.clearPixels();
         screen.handleEvents();

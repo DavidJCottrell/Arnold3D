@@ -20,13 +20,12 @@ struct connection {
 
 class Cube {
 public:
-    Cube();
+    Cube(vec3 position, float size);
     void render(Screen& screen);
 private:
     std::vector<vec3> points;
     std::vector<connection> connections;
     vec3 centroid{0, 0, 0};
-
     static void rotate(vec3& point, float x = 1, float y = 1, float z = 1);
     static void drawLine(Screen& screen, float x1, float y1, float x2, float y2);
 };
